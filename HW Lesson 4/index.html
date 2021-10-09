@@ -18,7 +18,27 @@
        }
     </script>
     <script>
-        
+        window.onbeforeunload = () =>{
+            console.log(new Date())
+            return false
+        }
     </script>
+    
+    <!----> <script>
+        window.onload = () =>{
+            let startTime = new Date()
+        }
+    </script>
+    <script>
+        window.onbeforeunload = () =>{
+            let FinishTime = new Date()
+            return false
+        }
+    </script>
+    <script>
+        let wholeTime = startTime - FinishTime;
+    </script> <!---->
+    
+
 </body>
 </html>

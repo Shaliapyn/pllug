@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Homework</title>
+ </head>
+ <body>
+   <div class="container">
+     <ul id="animals">
+       <li class="pet">Dog</li>
+       <li id="cat" class="pet">Cat</li>
+       <li class="wild">Elephant</li>
+       <li class="wild">Whale</li>
+       <li class="wild">Horse</li>
+       <li class="wild dangerous">Tiger</li>
+     </ul>
+     <ul id="birds">
+       <li class="wild">Eagle</li>
+       <li class="wild">Sparrow</li>
+       <li class="pet wild">Parrot</li>
+     </ul>
+   </div>
+   <script>
+       let animals = document.querySelector("#animals"); 
+
+    //    Функція яка видаляє всі класи останнього елемента списку animals
+       function removeLastElementClass(){
+           animals.lastElementChild.removeAttribute("class")
+       }
+    //    Функція яка змінює background-color наступного елемента після елемента з id="cat"
+    function changeBgColor(){
+        document.getElementById('cat').nextElementSibling.style.backgroundColor = "blue"
+        
+    }
+    // Функція яка змінює колір тексту на червоний всім елементам які мають клас dangerous
+    function makeDangerousRed(){
+        document.querySelector('.dangerous').style.backgroundColor = 'red'
+    }
+    // Функція яка видаляє всі елементи які мають клас pet, але якщо крім класу pet є ще інші класи, то вони повинні залишитись
+    function deleteClassPet(){
+        if (document.querySelector('.pet').classList.contains('wild') == false){
+            document.querySelector('.pet').remove()
+        } 
+    }
+    //  Функція яка додає додає новий елемент в список birds - після цього це має бути список у якому новий елемент є першим
+    function prependElement(){
+        let newElement = document.createElement('div')
+        document.getElementById('birds').prepend(newElement)
+    }
+    prependElement()
+    prependElement()
+    // Функція яка додає додає новий елемент в список birds - після цього це має бути список у якому новий елемент є останнім
+    function appendElement(){
+        let newElement = document.createElement('div')
+        document.getElementById('birds').append(newElement)
+    }
+    // Функція яка додає додає новий список id="fish" перед списком birds
+    function addFishList(){
+      let fishList = document.createElement('ul');
+      fishList.setAttribute('id', 'fish');
+      document.getElementById('birds').before(fishList)
+    }
+    // Функція яка змінює порядок елементів в списку animals - останній елемент стає першим, передостанній  - другим, і т.д.
+
+    // пробував 
+    function replaceAnimals(){
+ 
+    for (let i = animals.children.length - 1; i >= 0; i--) {
+    for (let k = 0; k <=animals.children.length; k++){
+      animals.children[k].replaceWith(animals.children[i])
+    }
+  }
+}
+replaceAnimals()
+    
+    
+   </script>
+ </body>
+</html>
