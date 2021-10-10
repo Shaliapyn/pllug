@@ -21,7 +21,13 @@
    </div>
    <script>
        let animals = document.querySelector("#animals"); 
-
+    //    Функція яка збільшує розмір шрифту всіх елементів списку animals
+    function animToUpperCase(){
+      for (let i = 0; i < animals.children.length; i++){
+        animals.children[i].textContent = animals.children[i].textContent.toUpperCase()
+      }
+    }  
+    animToUpperCase()
     //    Функція яка видаляє всі класи останнього елемента списку animals
        function removeLastElementClass(){
            animals.lastElementChild.removeAttribute("class")
@@ -63,15 +69,24 @@
 
     // пробував 
     function replaceAnimals(){
- 
-    for (let i = animals.children.length - 1; i >= 0; i--) {
-    for (let k = 0; k <=animals.children.length; k++){
-      animals.children[k].replaceWith(animals.children[i])
-    }
+      document.querySelector("#animals").querySelectorAll('li').
+  //   for (let i = animals.children.length - 1; i >= 0; i--) {
+  //   for (let k = 0; k <=animals.children.length; k++){
+  //     animals.children[k].replaceWith(animals.children[i])
+  //   }
+  // }
+}
+// Функція яка перетворює класи елементів списку animals і додає до цих елементів data-* атрибути з назвою класу який був прибраний. Наприклад: <li class="wild dangerous">Tiger</li> => <li data-wild data-dangerous>Tiger</li>
+// ламається, на елементі списку, де 2 класи
+function addData(){
+  for (let i = 0; i < animals.children.length; i++){
+    let animalChildren = document.getElementById('animals').children;
+
+    animalChildren[i].setAttribute(`data-${animalChildren[i].className}`, '');
+    animalChildren[i].removeAttribute('class')
   }
 }
-replaceAnimals()
-    
+
     
    </script>
  </body>
