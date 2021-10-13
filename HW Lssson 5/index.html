@@ -47,6 +47,9 @@
             document.querySelector('.pet').remove()
         } 
     }
+    //функція видаляє елемент, а не клас. Завдання не виконано
+
+
     //  Функція яка додає додає новий елемент в список birds - після цього це має бути список у якому новий елемент є першим
     function prependElement(){
         let newElement = document.createElement('div')
@@ -76,6 +79,9 @@
   //   }
   // }
 }
+// Не зроблено
+
+
 // Функція яка перетворює класи елементів списку animals і додає до цих елементів data-* атрибути з назвою класу який був прибраний. Наприклад: <li class="wild dangerous">Tiger</li> => <li data-wild data-dangerous>Tiger</li>
 // ламається, на елементі списку, де 2 класи
 function addData(){
@@ -83,9 +89,18 @@ function addData(){
     let animalChildren = document.getElementById('animals').children;
 
     animalChildren[i].setAttribute(`data-${animalChildren[i].className}`, '');
-    animalChildren[i].removeAttribute('class')
+    animalChildren[i].removeAttribute('class') //Щоб видалити
   }
 }
+
+//Треба робити через classList, щоб витягнути список всіх класів як масив і почергово перетворити їх в data атрибути
+//Завдання зроблене частково
+
+
+
+// За винятком незроблених або частково зроблених завдань, є ще два зауваження:
+// 1. Скрипти ліпше виносити в окремий файл, а не писати їх всередині html-розмітки
+// 2. Стиль коду трохи хромає, рекомендую почитати якісь стайлгайди для JS
 
     
    </script>
