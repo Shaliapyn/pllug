@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap');
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  :focus, :active {
+    outline: none;
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+  
+  nav, footer, header, aside {
+    display: block;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  input, button, textarea {
+    font-family: inherit;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  a, a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  img {
+    vertical-align: top;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  /*--------------------*/
+  body {
+      max-height: 1080px;
+  }
+ .container {
+     border: 1px solid #000;
+     text-align: left;
+     height: 50vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+ 
+ }
+  .bg {
+      color: white;
+      width: 50%;
+      background: url('../img/Mask\ Group\ 43.png') -20px 0/cover no-repeat;
+      height: 1080px;
+      padding-top: 90px;
+      padding-left: 90px;
+
+  }
+  .title {
+      font-family: Helvetica;
+      font-weight: 500;
+      font-size: 50px;
+  }
+  .under-title-text p {
+      max-width: 732px;
+      font-family: 'Poppins';
+      font-weight: 400;
+      font-size: 16px;
+      opacity: 0.8;
+  }
+  .under-title-text {
+      padding-right: 14%;
+  }
+  .header3-title {
+      font-family: 'Poppins';
+      font-weight: 500;
+      font-size: 24px;
+  }
+  
+$sotka: 100px;
+
+.bg {
+    font-size: $sotka;
+}

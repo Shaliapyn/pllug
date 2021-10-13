@@ -8,12 +8,21 @@
 </head>
 <body>
     <form action="">
-        <input id="inp" minlength="3" maxlength="24" type="text">
+        <input placeholder="write here" id="inp" minlength="3" maxlength="24" type="text">
+        <button id='btn' disabled type="button">Submit</button>
     </form>
     <script>
-        let inpValue = document.getElementById("inp");
-        
-        inp.value
+        let inpValue = document.getElementById("inp"),
+            letters = /^[A-Za-z]+$/,
+            numbers = /^[0-9]+$/;
+        inpValue.addEventListener('input', inoutChange)
+        function inoutChange(){
+            if(inpValue.value.match(letters) || inpValue.value.match(numbers)){
+                document.getElementById('btn').removeAttribute('disabled');
+                return true;
+             } else {document.getElementById('btn').setAttribute('disabled', '');}
+        }
+        // && (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )
     </script>
 </body>
 </html>
