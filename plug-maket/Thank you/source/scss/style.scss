@@ -115,6 +115,9 @@
       font-size: 16px;
       opacity: 0.8;
       line-height: 28px;
+      @media (max-width:768px) {
+        font-size: 12px;
+    }
   }
   .container__text {
       display: flex;
@@ -127,6 +130,9 @@
       font-family: 'Poppins';
       font-weight: 500;
       font-size: 24px;
+      @media (max-width:768px) {
+        font-size: 20px;
+    }
   }
   .sign-in {
     width: 50%;
@@ -145,6 +151,18 @@
         line-height: 23px;
         @media (min-width:1200px) {
             width: 442px;
+        }
+        @media (max-width:1200px) {
+          margin-left: 25px;
+      }
+        .form__text1 {
+          color: #8D8DA5;
+          & span {
+            text-decoration: underline;
+          }
+        }
+        .form__text2 {
+          color: #8D8DA5;
         }
         .form__text2 button {
           color: #181C32;

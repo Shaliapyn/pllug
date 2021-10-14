@@ -133,6 +133,11 @@ body .wrapper {
   opacity: 0.8;
   line-height: 28px;
 }
+@media (max-width: 768px) {
+  .container__text p {
+    font-size: 12px;
+  }
+}
 
 .container__text {
   display: -webkit-box;
@@ -153,6 +158,11 @@ body .wrapper {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 24px;
+}
+@media (max-width: 768px) {
+  .container__text h3 {
+    font-size: 20px;
+  }
 }
 
 .sign-in {
@@ -190,6 +200,20 @@ body .wrapper {
   .sign-in .sign-in-form-block .sign-in-form-block__form {
     width: 442px;
   }
+}
+@media (max-width: 1200px) {
+  .sign-in .sign-in-form-block .sign-in-form-block__form {
+    margin-left: 25px;
+  }
+}
+.sign-in .sign-in-form-block .sign-in-form-block__form .form__text1 {
+  color: #8D8DA5;
+}
+.sign-in .sign-in-form-block .sign-in-form-block__form .form__text1 span {
+  text-decoration: underline;
+}
+.sign-in .sign-in-form-block .sign-in-form-block__form .form__text2 {
+  color: #8D8DA5;
 }
 .sign-in .sign-in-form-block .sign-in-form-block__form .form__text2 button {
   color: #181C32;
