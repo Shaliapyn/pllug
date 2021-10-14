@@ -166,11 +166,9 @@ body .wrapper {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.sign-in .sign-in-form-block {
-  max-width: 442px;
-}
-.sign-in .sign-in-form-block .sign-in-form-block__form {
-  height: 470px;
+.sign-in .sign-in-form-block__form {
+  width: 60%;
+  height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,14 +180,20 @@ body .wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 13px;
+  line-height: 23px;
 }
-.sign-in .sign-in-form-block .sign-in-form-block__form .form__button-forgot-p {
+@media (min-width: 1200px) {
+  .sign-in .sign-in-form-block__form {
+    width: 442px;
+  }
+}
+.sign-in .sign-in-form-block__form .form__button-forgot-p {
   float: right;
   margin-top: 20px;
   background-color: white;
   text-decoration: underline;
 }
-.sign-in .sign-in-form-block .sign-in-form-block__form h2 {
+.sign-in .sign-in-form-block__form h2 {
   font-size: 36px;
   font-family: "Poppins";
   font-weight: bold;
@@ -203,11 +207,10 @@ body .wrapper {
 }
 .sign-in .sign-in-form-block__form input {
   height: 50px;
-  width: 442px;
+  width: 100%;
   border: 1px solid #DBDFEB;
   border-radius: 8px;
   padding-left: 16px;
-  margin-top: 19px;
 }
 .sign-in .buttons {
   display: -webkit-box;
@@ -222,7 +225,7 @@ body .wrapper {
           justify-content: space-between;
   height: 80px;
 }
-.sign-in .buttons .buttons__sing-up {
+.sign-in .buttons .buttons__sign-up {
   height: 50px;
   width: 164px;
   margin: 0 auto;
@@ -237,4 +240,55 @@ body .wrapper {
   background-color: white;
   margin: 0 auto;
   text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .bg {
+    width: 100%;
+  }
+  .wrapper .bg .container {
+    height: 240px;
+    margin: -60px -60px 15px -60px;
+  }
+  .wrapper .bg .container .container__main-title {
+    font-size: 32px;
+  }
+  .wrapper .bg .container .container__text {
+    height: 140px;
+  }
+  .wrapper .bg .container .container__text p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .wrapper .bg .container .container__text h3 {
+    font-size: 18px;
+  }
+  .wrapper .sign-in {
+    width: 100%;
+  }
+  .wrapper .sign-in-form-block__form {
+    margin-top: 30px;
+    height: 350px;
+  }
+  .wrapper .sign-in-form-block__form h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    height: 290px;
+    margin: -60px -60px 15px -60px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    height: 290px;
+    margin: -40px -40px 15px -40px;
+  }
 }

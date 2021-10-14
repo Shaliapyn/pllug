@@ -171,6 +171,7 @@ body .wrapper {
   max-width: 442px;
 }
 .sign-in .sign-in-form-block .sign-in-form-block__form {
+  width: 60%;
   height: 355px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,8 +184,12 @@ body .wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 13px;
-  color: #8D8DA5;
   line-height: 23px;
+}
+@media (min-width: 1200px) {
+  .sign-in .sign-in-form-block .sign-in-form-block__form {
+    width: 442px;
+  }
 }
 .sign-in .sign-in-form-block .sign-in-form-block__form .form__text2 button {
   color: #181C32;
@@ -197,8 +202,10 @@ body .wrapper {
   font-weight: bold;
   color: #181C32;
 }
-.sign-in .sign-in-form-block__form p {
-  max-width: 442px;
+@media (max-width: 992px) {
+  .sign-in .sign-in-form-block .sign-in-form-block__form h2 {
+    font-size: 24px;
+  }
 }
 .sign-in .buttons {
   display: -webkit-box;
@@ -213,7 +220,7 @@ body .wrapper {
           justify-content: space-between;
   height: 80px;
 }
-.sign-in .buttons .buttons__sing-up {
+.sign-in .buttons .buttons__sign-up {
   height: 50px;
   width: 164px;
   float: left;
@@ -227,4 +234,54 @@ body .wrapper {
   width: 50px;
   background-color: white;
   margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .bg {
+    width: 100%;
+  }
+  .wrapper .bg .container {
+    height: 240px;
+    margin: -60px -60px 15px -60px;
+  }
+  .wrapper .bg .container .container__main-title {
+    font-size: 32px;
+  }
+  .wrapper .bg .container .container__text {
+    height: 140px;
+  }
+  .wrapper .bg .container .container__text p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .wrapper .bg .container .container__text h3 {
+    font-size: 18px;
+  }
+  .wrapper .sign-in {
+    width: 100%;
+  }
+  .wrapper .sign-in-form-block__form {
+    margin-top: 30px;
+  }
+  .wrapper .sign-in-form-block__form h2 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    height: 290px;
+    margin: -60px -60px 15px -60px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    height: 290px;
+    margin: -40px -40px 15px -40px;
+  }
 }

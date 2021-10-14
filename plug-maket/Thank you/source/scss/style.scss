@@ -136,13 +136,16 @@
     .sign-in-form-block {
       max-width: 442px;
       .sign-in-form-block__form {
+        width: 60%;
         height: 355px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         font-size: 13px;
-        color: #8D8DA5;
         line-height: 23px;
+        @media (min-width:1200px) {
+            width: 442px;
+        }
         .form__text2 button {
           color: #181C32;
           text-decoration: underline;
@@ -155,18 +158,17 @@
        font-family: 'Poppins';
        font-weight: bold;
        color: #181C32;
-        
+       @media (max-width:992px) {
+        font-size: 24px;
+      } 
       }
-    }
-    .sign-in-form-block__form p {
-     max-width: 442px;
     }
     .buttons {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 80px;
-      .buttons__sing-up {
+      .buttons__sign-up {
         height: 50px;
         width: 164px;
         float: left;
@@ -182,5 +184,55 @@
         margin: 0 auto;
       }
 
+    }
+  }
+  @media (max-width:576px) {
+    .wrapper {
+      flex-direction: column;
+      .bg {
+        width: 100%;
+        .container {
+          height: 240px;
+          margin: -60px -60px 15px -60px;
+          // margin-top: -40px;
+          // margin-left: -40px;
+          // margin-bottom: 15px;
+          // margin-right: -40px;
+          .container__main-title {
+            font-size: 32px;
+          }
+          .container__text {
+            height: 140px;
+          }
+          .container__text p {
+            font-size: 13px;
+            line-height: 22px;
+          }
+          .container__text h3 {
+            font-size: 18px;
+          }
+        }
+      }
+      .sign-in {
+        width: 100%;
+      }
+      .sign-in-form-block__form {
+        margin-top: 30px;
+      }
+      .sign-in-form-block__form h2 {
+        font-size: 15px;
+      }
+    }
+  }
+  @media (max-width:768px) {
+    .container {
+      height: 290px;
+      margin: -60px -60px 15px -60px;
+    }
+  }
+  @media (max-width:992px) {
+    .container {
+      height: 290px;
+      margin: -40px -40px 15px -40px;
     }
   }

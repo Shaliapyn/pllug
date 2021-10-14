@@ -114,6 +114,7 @@
       font-weight: 400;
       font-size: 16px;
       opacity: 0.8;
+      line-height: 28px;
   }
   .container__text {
       display: flex;
@@ -127,51 +128,56 @@
       font-weight: 500;
       font-size: 24px;
   }
+  // rigth side of screen
   .sign-in {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    .sign-in-form-block {
-      max-width: 442px;
       .sign-in-form-block__form {
-        height: 552px;
+        width: 60%;
+        height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         font-size: 13px;
-        
+        line-height: 23px;
+        @media (min-width:1200px) {
+            width: 442px;
+        }
       }
       .sign-in-form-block__form h2 {
        font-size: 36px;
        font-family: 'Poppins';
        font-weight: bold;
-       color: #8D8DA5;
+       color: #8D8DA5;     
+      }
+      .sign-in-form-block__form input {
+        height: 50px;
+        width: 100%;
+        border: 1px solid #DBDFEB; 
+        border-radius: 8px;
+        padding-left: 16px;
         
       }
-    }
     .sign-in-form__lab1 {
       font-weight: bold;
+      display: block;
     }
     .sign-in-form__lab2 {
       font-weight: bold;
+      display: block;
     }
     .sign-in-form__lab3 {
       font-weight: bold;
-    }
-    .sign-in-form-block__form input {
-      height: 50px;
-      width: 442px;
-      border: 1px solid #DBDFEB; 
-      border-radius: 8px;
-      padding-left: 16px;
+      display: block;
     }
     .buttons {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 80px;
-      .buttons__sing-up {
+      .buttons__sign-up {
         height: 50px;
         width: 164px;
         margin: 0 auto;
@@ -185,7 +191,60 @@
         width: 50px;
         background-color: white;
         margin: 0 auto;
+        text-decoration: underline;
       }
 
     }
   }
+ 
+  @media (max-width:576px) {
+    .wrapper {
+      flex-direction: column;
+      .bg {
+        width: 100%;
+        .container {
+          height: 240px;
+          margin: -60px -60px 15px -60px;
+          // margin-top: -40px;
+          // margin-left: -40px;
+          // margin-bottom: 15px;
+          // margin-right: -40px;
+          .container__main-title {
+            font-size: 32px;
+          }
+          .container__text {
+            height: 140px;
+          }
+          .container__text p {
+            font-size: 13px;
+            line-height: 22px;
+          }
+          .container__text h3 {
+            font-size: 18px;
+          }
+        }
+      }
+      .sign-in {
+        width: 100%;
+      }
+      .sign-in-form-block__form {
+        margin-top: 30px;
+      }
+      .sign-in-form-block__form h2 {
+        font-size: 24px;
+      }
+    }
+  }
+  @media (max-width:768px) {
+    .container {
+      height: 290px;
+      margin: -60px -60px 15px -60px;
+    }
+  }
+  @media (max-width:992px) {
+    .container {
+      height: 290px;
+      margin: -40px -40px 15px -40px;
+    }
+  }
+
